@@ -11,46 +11,34 @@
 
 <div class="app">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="logo">AskJeev</div>
-    <div class="tag">AI Operating System</div>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="title">AskJeev</div>
+    <div class="subtitle">Your AI system</div>
+  </header>
 
-    <div class="nav">
-      <div class="item active">💬 Chat</div>
-      <div class="item">📂 Projects</div>
-      <div class="item">🧠 Memory</div>
-      <div class="item">🌍 Research</div>
-      <div class="item">📁 Files</div>
-      <div class="item">⚙️ Settings</div>
-    </div>
+  <!-- CHAT AREA -->
+  <main id="chat" class="chat">
 
-    <div class="footer">v1 • Ultra UI Build</div>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main">
-
-    <header class="topbar">
-      <h1>AskJeev</h1>
-      <p>Faster than search. Smarter than chat. Gets things done.</p>
-    </header>
-
-    <section id="chat" class="chat">
-
-      <div class="bot message animate">
-        Hello 👋 I’m AskJeev. What would you like to build, learn, or solve today?
-      </div>
-
-    </section>
-
-    <!-- INPUT -->
-    <div class="inputWrap">
-      <input id="input" placeholder="Message AskJeev..." />
-      <button onclick="send()">➤</button>
+    <div class="bot message">
+      Hey 👋 I’m AskJeev. Ask me anything.
     </div>
 
   </main>
+
+  <!-- INPUT -->
+  <div class="inputBar">
+    <input id="input" placeholder="Message AskJeev..." />
+    <button onclick="send()">➤</button>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottomNav">
+    <div class="navItem active">Chat</div>
+    <div class="navItem">Projects</div>
+    <div class="navItem">Memory</div>
+    <div class="navItem">Settings</div>
+  </nav>
 
 </div>
 
