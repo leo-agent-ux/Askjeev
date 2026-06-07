@@ -2,34 +2,34 @@ function send() {
   const input = document.getElementById("input");
   const chat = document.getElementById("chat");
 
-  const text = input.value.trim();
+  const text = input.value;
   if (!text) return;
 
-  // user message
   chat.innerHTML += `<div class="msg user">${text}</div>`;
   input.value = "";
 
-  // bot response
+  // "thinking" effect
   setTimeout(() => {
-    chat.innerHTML += `<div class="msg bot">${getReply(text)}</div>`;
+    chat.innerHTML += `<div class="msg bot">Thinking...</div>`;
     chat.scrollTop = chat.scrollHeight;
   }, 500);
+
+  setTimeout(() => {
+    chat.innerHTML += `<div class="msg bot">${reply(text)}</div>`;
+    chat.scrollTop = chat.scrollHeight;
+  }, 1200);
 }
 
-function getReply(text) {
-  text = text.toLowerCase();
+function reply(t) {
+  t = t.toLowerCase();
 
-  if (text.includes("football")) {
-    return "I can help you build training plans, improve positioning, and prepare for trials.";
+  if (t.includes("football")) {
+    return "I can build your training plan, improve your positioning, and help you prepare for trials.";
   }
 
-  if (text.includes("study")) {
-    return "I can summarise topics, create revision notes, and help you learn faster.";
+  if (t.includes("study")) {
+    return "I can summarise topics and create revision notes for you.";
   }
 
-  if (text.includes("askjeev")) {
-    return "AskJeev is your AI system for learning, building, and getting things done.";
-  }
-
-  return "I'm AskJeev. Soon I will become a fully intelligent AI system.";
+  return "AskJeev is running. Real AI will be connected soon.";
 }
