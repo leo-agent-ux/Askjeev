@@ -5,31 +5,24 @@ function send() {
   const text = input.value.trim();
   if (!text) return;
 
-  // user message
-  const userMsg = document.createElement("div");
-  userMsg.className = "message user";
-  userMsg.innerText = text;
-  chat.appendChild(userMsg);
+  // user
+  const user = document.createElement("div");
+  user.className = "message user";
+  user.innerText = text;
+  chat.appendChild(user);
 
   input.value = "";
 
-  // typing indicator
-  const typing = document.createElement("div");
-  typing.className = "message bot";
-  typing.innerText = "Thinking...";
-  typing.style.opacity = "0.7";
-  chat.appendChild(typing);
+  // typing
+  const bot = document.createElement("div");
+  bot.className = "message bot";
+  bot.innerText = "Thinking...";
+  chat.appendChild(bot);
 
   chat.scrollTop = chat.scrollHeight;
 
   setTimeout(() => {
-    typing.remove();
-
-    const botMsg = document.createElement("div");
-    botMsg.className = "message bot";
-    botMsg.innerText = reply(text);
-    chat.appendChild(botMsg);
-
+    bot.innerText = reply(text);
     chat.scrollTop = chat.scrollHeight;
   }, 900);
 }
@@ -38,16 +31,12 @@ function reply(t) {
   t = t.toLowerCase();
 
   if (t.includes("football")) {
-    return "I can build your training plan, improve positioning, and prepare you for trials step by step.";
+    return "I can design your training plan, improve your positioning, and prepare you for trials.";
   }
 
   if (t.includes("study")) {
-    return "I can turn complex topics into simple revision notes and help you learn faster.";
+    return "I can turn topics into simple revision notes and help you revise faster.";
   }
 
-  if (t.includes("askjeev")) {
-    return "AskJeev is your AI system for learning, building, and solving problems.";
-  }
-
-  return "AskJeev is running in ultra UI mode. Intelligence layer will be connected later.";
+  return "AskJeev is running in mobile app UI mode. Intelligence will be connected next.";
 }
