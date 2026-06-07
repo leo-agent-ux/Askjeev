@@ -9,22 +9,35 @@
 
 <body>
 
-  <div class="container">
+<div class="app">
 
-    <header class="topbar">
-      <div class="logo">AskJeev</div>
-      <div class="tagline">Faster. Smarter. Gets things done.</div>
-    </header>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>AskJeev</h2>
+    <p>AI System</p>
 
-    <main id="chat" class="chat"></main>
+    <div class="menu">
+      <div>💬 Chat</div>
+      <div>📁 Projects</div>
+      <div>🧠 Memory</div>
+      <div>🌐 Research</div>
+    </div>
+  </div>
 
-    <div class="input-bar">
-      <input id="input" placeholder="Message AskJeev..." />
-      <button onclick="send()">➤</button>
+  <!-- MAIN -->
+  <div class="main">
+
+    <div id="chat" class="chat"></div>
+
+    <div class="input-area">
+      <input id="input" placeholder="Ask AskJeev..." />
+      <button onclick="send()">Send</button>
     </div>
 
   </div>
 
-  <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
