@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AskJeev</title>
-  <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AskJeev</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
@@ -12,29 +12,45 @@
 <div class="app">
 
   <!-- SIDEBAR -->
-  <div class="sidebar">
-    <h2>AskJeev</h2>
-    <p>AI System</p>
+  <aside class="sidebar">
+    <div class="logo">AskJeev</div>
+    <div class="tag">AI Operating System</div>
 
-    <div class="menu">
-      <div>💬 Chat</div>
-      <div>📁 Projects</div>
-      <div>🧠 Memory</div>
-      <div>🌐 Research</div>
+    <div class="nav">
+      <div class="item active">💬 Chat</div>
+      <div class="item">📂 Projects</div>
+      <div class="item">🧠 Memory</div>
+      <div class="item">🌍 Research</div>
+      <div class="item">📁 Files</div>
+      <div class="item">⚙️ Settings</div>
     </div>
-  </div>
+
+    <div class="footer">v1 • Ultra UI Build</div>
+  </aside>
 
   <!-- MAIN -->
-  <div class="main">
+  <main class="main">
 
-    <div id="chat" class="chat"></div>
+    <header class="topbar">
+      <h1>AskJeev</h1>
+      <p>Faster than search. Smarter than chat. Gets things done.</p>
+    </header>
 
-    <div class="input-area">
-      <input id="input" placeholder="Ask AskJeev..." />
-      <button onclick="send()">Send</button>
+    <section id="chat" class="chat">
+
+      <div class="bot message animate">
+        Hello 👋 I’m AskJeev. What would you like to build, learn, or solve today?
+      </div>
+
+    </section>
+
+    <!-- INPUT -->
+    <div class="inputWrap">
+      <input id="input" placeholder="Message AskJeev..." />
+      <button onclick="send()">➤</button>
     </div>
 
-  </div>
+  </main>
 
 </div>
 
